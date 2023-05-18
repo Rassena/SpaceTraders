@@ -1,4 +1,4 @@
-TOKEN = ""  # put there token
+from data.token import TOKEN
 
 H_AUTHORIZATION = {'Authorization': f'Bearer {TOKEN}'}
 H_CONTENT_TYPE_JSON = {'Content-Type': 'application/json'}
