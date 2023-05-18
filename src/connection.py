@@ -23,5 +23,7 @@ def put_request(url, header=H_AUTHORIZATION):
 
 def post_request(url, header=H_AUTHORIZATION, data=None):
     with httpx.Client() as client:
-        response = client.post(url, headers=header, json=data)
-    return json.loads(response.text)
+        if data:
+            return json.loads(client.post(url, headers=header, json=data).text)
+        else:
+            return json.loads(client.post(url, headers=header).text)

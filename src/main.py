@@ -8,7 +8,7 @@ def can_mine(miner):
     pass
 
 
-def sell_inventory(miner,inventory):
+def sell_inventory(miner, inventory):
     dock(miner)
     for unit in inventory:
         print(sell(miner, unit.get(SYMBOL), unit.get(UNITS)))
@@ -30,7 +30,7 @@ def miner_loop():
         sell_inventory(miner_01, cargo.get("inventory"))
         refuel(miner_01)
         orbit(miner_01)
-        res = mine(miner_01)
+        res = extract(miner_01)
         print(res)
         cooldown = res.get("data").get("cooldown").get("totalSeconds")
         print(f"sleep: {cooldown} sec")
@@ -45,6 +45,8 @@ if __name__ == "__main__":
     # print(refuel(miner_01))
 
     miner_01 = "RASSENA-2"
+    main_ship = "RASSENA-1"
+
     # print(mine(miner_01))
     # data: dict = get_ship(miner_01)
 
@@ -55,4 +57,6 @@ if __name__ == "__main__":
 
     # print(sell(miner_01, "ALUMINUM_ORE", 8))
 
-    miner_loop()
+    # miner_loop()
+
+    create_survey(main_ship)
