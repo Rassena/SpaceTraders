@@ -1,5 +1,5 @@
-from data import api
-from src.connection import *
+import data.api as api
+from connection import *
 
 
 def get_contracts():

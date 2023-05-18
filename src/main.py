@@ -1,7 +1,7 @@
 from time import sleep
 
-from src.contract import *
-from src.ships import *
+from contract import *
+from ships import *
 
 
 def can_mine(miner):
