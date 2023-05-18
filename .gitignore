@@ -1,3 +1,4 @@
 venv/*
+.venv
 *pychache*
 data/token.py

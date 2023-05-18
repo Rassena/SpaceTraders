@@ -5,7 +5,7 @@ import httpx
 from data.constants import H_AUTHORIZATION
 
 
-def extend_header(base_header: {}, extend_header=H_AUTHORIZATION):
+def extend_header(base_header, extend_header=H_AUTHORIZATION):
     base_header.update(extend_header)
     return base_header
 
