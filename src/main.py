@@ -9,7 +9,6 @@ if __name__ == "__main__":
     # print(refuel(miner_01))
 
     miner_01 = "RASSENA-2"
-    main_ship = "RASSENA-1"
 
     # print(mine(miner_01))
     # data: dict = get_ship(miner_01)
@@ -21,6 +20,3 @@ if __name__ == "__main__":
 
     # print(sell(miner_01, "ALUMINUM_ORE", 8))
 
-    # miner_loop()
-
-    create_survey(main_ship)
