@@ -12,8 +12,12 @@ def extend_header(base_header: {}, extend_header=H_AUTHORIZATION):
 def get_request(url, header=H_AUTHORIZATION):
     with httpx.Client() as client:
         response = client.get(url, headers=header)
-    return json.loads(response.text)
-
+    if response.status_code == 200:
+        return json.loads(response.text)
+    else:
+        # fixme: use log
+        print(response)
+        return response.status_code
 
 def put_request(url, header=H_AUTHORIZATION):
     with httpx.Client() as client:
