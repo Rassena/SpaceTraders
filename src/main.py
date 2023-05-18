@@ -43,9 +43,9 @@ if __name__ == "__main__":
     # print(move_to(miner_01, waypoint_01))
     # print(dock(miner_01))
     # print(refuel(miner_01))
-    # print(mine(miner_01))
 
     miner_01 = "RASSENA-2"
+    # print(mine(miner_01))
     # data: dict = get_ship(miner_01)
 
     # cargo = data.get("data").get("cargo")
