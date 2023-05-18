@@ -1,5 +1,25 @@
 from time import sleep
 from src.ships import *
+from data.data import automation_data
+
+
+def fulify_contract():
+
+    ships = automation_data.get("ships")
+    contract_id = automation_data.get("contract_id")
+    wanted_resource = automation_data.get("wanted_resource")
+    destinationSymbol = automation_data.get("destinationSymbol")
+
+
+
+
+def extract_resources(miner):
+
+    pass
+
+def if_cooldown(ship_id):
+    return get_cooldown(ship_id) != 200
+
 
 
 def sell_inventory(miner, inventory):
@@ -8,13 +28,14 @@ def sell_inventory(miner, inventory):
         print(sell(miner, unit.get(SYMBOL), unit.get(UNITS)))
 
 
+
 def cargo_empty(cargo):
     capacity = cargo.get("capacity")
     units = cargo.get("units")
     inventory = cargo.get("inventory")
 
 
-def miner_loop():
+def loop():
     miner_01 = "RASSENA-2"
     waypoint_01 = "X1-ZA40-99095A"
     current_contract = "clhrimv5d31cys60dq79ji82t"
@@ -29,3 +50,8 @@ def miner_loop():
         cooldown = res.get("data").get("cooldown").get("totalSeconds")
         print(f"sleep: {cooldown} sec")
         sleep(cooldown)
+
+
+
+
+
