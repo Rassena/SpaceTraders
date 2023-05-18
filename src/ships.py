@@ -60,4 +60,49 @@ def sell(ship_id, symbol, units):
         SYMBOL: symbol,
         UNITS: units
     }
+    """
+    idea to log: 
+    'transaction': {'waypointSymbol':, 'shipSymbol': , 'tradeSymbol': , 
+    'type': , 'units': , 'pricePerUnit':, 'totalPrice': , 'timestamp': '2023-05-18T19:02:42.574Z'}}}
+    
+    """
     return post_request(api.ship_sell.format(ship_id), header=header, data=data_to_send)
+
+
+def buy(ship_id, symbol, units):
+    header = extend_header(H_CONTENT_TYPE_JSON)
+    data_to_send = {
+        SYMBOL: symbol,
+        UNITS: units
+    }
+    """
+    idea to log: 
+    'transaction': {'waypointSymbol':, 'shipSymbol': , 'tradeSymbol': , 
+    'type': , 'units': , 'pricePerUnit':, 'totalPrice': , 'timestamp': '2023-05-18T19:02:42.574Z'}}}
+
+    """
+    return post_request(api.ship_purchase.format(ship_id), header=header, data=data_to_send)
+
+
+def refine(ship_id, symbol):
+    header = extend_header(extend_header(H_ACCEPT, H_CONTENT_TYPE_JSON))
+    data_to_send = {
+        PRODUCE: symbol
+    }
+    return post_request(api.ship_refine.format(ship_id), header=header, data=data_to_send)
+
+
+def transfer_cargo(ship_id_1, ship_id_2, trade_symbol, units):
+    header = extend_header(H_CONTENT_TYPE_JSON)
+    data_to_send = {
+        TRADE_SYMBOL: trade_symbol,
+        UNITS: units,
+        SHIP_SYMBOL: ship_id_2
+    }
+    """
+    idea to log: 
+    'transaction': {'waypointSymbol':, 'shipSymbol': , 'tradeSymbol': , 
+    'type': , 'units': , 'pricePerUnit':, 'totalPrice': , 'timestamp': '2023-05-18T19:02:42.574Z'}}}
+
+    """
+    return post_request(api.ship_transfer_cargo.format(ship_id_1), header=header, data=data_to_send)

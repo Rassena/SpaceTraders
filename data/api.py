@@ -1,9 +1,9 @@
 register = "https://api.spacetraders.io/v2/register"
 
-
-
 contracts = "https://api.spacetraders.io/v2/my/contracts/"
 contract = "https://api.spacetraders.io/v2/my/contracts/{}"
+contract_deliver = "https://api.spacetraders.io/v2/my/contracts/{}/deliver"
+contract_fulfill = "https://api.spacetraders.io/v2/my/contracts/{}/fulfill"
 
 ships = "https://api.spacetraders.io/v2/my/ships/"
 ship = "https://api.spacetraders.io/v2/my/ships/{}"
@@ -19,6 +19,8 @@ ship_create_chart = "https://api.spacetraders.io/v2/my/ships/{}/chart"
 ship_get_cooldown = "https://api.spacetraders.io/v2/my/ships/{}/cooldown"
 ship_survey = "https://api.spacetraders.io/v2/my/ships/{}/survey"
 ship_scan_system = "https://api.spacetraders.io/v2/my/ships/{}/scan/systems"
-
+ship_transfer_cargo = "https://api.spacetraders.io/v2/my/ships/{}/transfer"
+ship_purchase = "https://api.spacetraders.io/v2/my/ships/{}/purchase"
+ship_refine = "https://api.spacetraders.io/v2/my/ships/{}/refine"
 
 systems = "https://api.spacetraders.io/v2/systems/{}/waypoints"
