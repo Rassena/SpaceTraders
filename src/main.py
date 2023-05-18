@@ -1,10 +1,8 @@
 from time import sleep
-
-from contract import *
-from ships import *
+from ship import *
 
 
-def can_mine(miner):
+"""def can_mine(miner):
     pass
 
 
@@ -34,7 +32,7 @@ def miner_loop():
         print(res)
         cooldown = res.get("data").get("cooldown").get("totalSeconds")
         print(f"sleep: {cooldown} sec")
-        sleep(cooldown)
+        sleep(cooldown)"""
 
 
 if __name__ == "__main__":
@@ -44,7 +42,6 @@ if __name__ == "__main__":
     # print(dock(miner_01))
     # print(refuel(miner_01))
 
-    miner_01 = "RASSENA-2"
     # print(mine(miner_01))
     # data: dict = get_ship(miner_01)
 
@@ -55,4 +52,12 @@ if __name__ == "__main__":
 
     # print(sell(miner_01, "ALUMINUM_ORE", 8))
 
-    miner_loop()
+    #miner_loop()
+
+    #res = get_ship(miner_01)
+    #print(res)
+
+    ship = Ship("RASSENA-1")
+
+    import pdb
+    pdb.set_trace()
